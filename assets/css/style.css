@@ -1029,7 +1029,9 @@ section {
 --------------------------------------------------------------*/
 .contact .info {
   width: 100%;
-  background: #fff;
+  background: #f7f8f9;
+  border-radius: 20px;
+  padding: 12px;
 }
 
 .contact .info i {
