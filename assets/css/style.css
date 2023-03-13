@@ -24,8 +24,12 @@ a {
   text-decoration: none;
 }
 
+li a{
+  color: #F5DF4D;
+}
+
 a:hover {
-  color: #8CACD3;
+  color: #F0A1BF;
   text-decoration: none;
 }
 
@@ -383,7 +387,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #939597;
+  color: #F5DF4D;
 }
 
 .section-title h2::before {
@@ -418,7 +422,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #F5DF4D;
+  color: #F0A1BF;
 }
 
 .about .content ul {
@@ -533,7 +537,7 @@ section {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #939597;
+  color: #F0A1BF;
 }
 
 .resume .resume-item {
