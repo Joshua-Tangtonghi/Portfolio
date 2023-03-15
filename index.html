@@ -49,7 +49,16 @@
     </nav><!-- .nav-menu -->
 
 </header><!-- End Header -->
+<script type="text/javascript">
 
+    $(document).ready(function(){
+        var allowed_brower = ['chrome', 'firefox', 'mozilla'];
+        if (allowed_brower.indexOf($.browser.name) === -1) {
+            alert("Votre navigateur n'est pas compatible avec ce site. Veuillez installer une version récente de Google Chrome, Firefox ou Microsoft Edge pour y accéder.")
+        }
+    });
+
+</script>
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex flex-column justify-content-center">
 
@@ -65,7 +74,7 @@
     </script>
     <script type="module" src="assets/js/spline.js"></script>
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
-        <h1>Tang tong hi Joshua</h1>
+        <h1>TANG TONG HI Joshua</h1>
         <p>I'm <span class="typed" data-typed-items="a Developer,a Musician, a Gamer,a 3d artist"></span></p>
         <div class="social-links">
             <a href="https://linktr.ee/joshuatangtonghi">
