@@ -295,11 +295,11 @@
    * Porfolio isotope and filter
    */
   window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
+    let portfolioContainers = select('.portfolio-container', true);
+    if (portfolioContainers.length) {
+      let portfolioIsotopes = portfolioContainers.map((portfolioContainer) => new Isotope(portfolioContainer, {
         itemSelector: '.portfolio-item'
-      });
+      }));
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
@@ -310,12 +310,12 @@
         });
         this.classList.add('filter-active');
 
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
+        portfolioIsotopes.forEach((portfolioIsotope) => {
+          portfolioIsotope.arrange({
+            filter: this.getAttribute('data-filter')
+          });
         });
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
-        });
+        AOS.refresh()
       }, true);
     }
 
