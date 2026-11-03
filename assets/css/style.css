@@ -2926,6 +2926,20 @@ body.scene-exploring {
   text-transform: none;
 }
 
+.featured-visual .portfolio-info.always-visible .project-category,
+.featured-visual .portfolio-info.always-visible .project-tech li {
+  color: var(--portfolio-black) !important;
+}
+
+.featured-visual .portfolio-info.always-visible .project-category {
+  background: var(--portfolio-gold);
+}
+
+.featured-visual .portfolio-info.always-visible .project-tech li {
+  border-color: rgba(246, 201, 120, .82);
+  background: rgba(246, 201, 120, .96);
+}
+
 .project-visual-rts {
   display: flex;
   align-items: flex-end;
