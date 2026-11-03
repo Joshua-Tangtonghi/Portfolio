@@ -5,7 +5,7 @@
     "name": "Tang tong hi Joshua",
     "email": "joshuatangtonghi@icloud.com",
     "location": "Arpajon, France, Île de France",
-    "summary": "Profil junior polyvalent en support informatique, administration technique, développement interactif et production audio. Expérience en support utilisateurs chez JobTeaser, formation ESGI en développement logiciel, réalité virtuelle et jeux vidéo, ainsi que pratique de la production sonore."
+    "summary": "Développeur logiciel et jeux vidéo orienté Unity, C#, IA et technologies immersives, avec une expérience en support informatique chez JobTeaser et une pratique de la production audio."
   },
   "sections": {
     "summary": "Profil",
@@ -14,13 +14,13 @@
     "education": "Formation",
     "skills": "Compétences"
   },
-  "summary": "Profil junior polyvalent en support informatique, administration technique, développement interactif et production audio. Expérience en support utilisateurs chez JobTeaser, formation ESGI en développement logiciel, réalité virtuelle et jeux vidéo, ainsi que pratique de la production sonore.",
+  "summary": "Développeur logiciel et jeux vidéo orienté Unity, C#, IA et technologies immersives, avec une expérience en support informatique chez JobTeaser et une pratique de la production audio.",
   "experience": [
     {
       "company": "NSX RECORDZ",
-      "role": "Sound Engineer",
+      "role": "Ingénieur du son",
       "location": "Location not specified",
-      "dates": "July 8 – July 23, 2026",
+      "dates": "8–23 juillet 2026",
       "bullets": [
         "Configuration et vérification d'équipements audio.",
         "Gestion de l'enregistrement, du routing et du traitement audio.",
@@ -29,12 +29,13 @@
     },
     {
       "company": "JobTeaser",
-      "role": "IT Support",
+      "role": "Support informatique",
       "location": "Location not specified",
-      "dates": "September 2023 – 2024",
+      "dates": "septembre 2023–2024",
       "bullets": [
         "Support informatique auprès des utilisateurs.",
-        "Résolution de problèmes techniques avec communication, rigueur et sens du service."
+        "Utilisation de Jamf, Apple Business Manager, Google Admin, Okta, Bitwarden et SentinelOne.",
+        "Préparation et dépannage de Mac et iPhone."
       ]
     },
     {
