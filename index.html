@@ -66,6 +66,7 @@
             </li>
             <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projets</span></a>
             </li>
+            <li><button class="nav-explore" type="button" data-explore-scene aria-pressed="false"><i class="bx bx-cube-alt"></i> <span>Explorer la scène 3D</span></button></li>
         </ul>
     </nav><!-- .nav-menu -->
 
@@ -73,12 +74,12 @@
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex flex-column justify-content-center">
 
-    <canvas id="canvas3d"></canvas>
+    <canvas id="canvas3d" aria-hidden="true"></canvas>
 
     <script type="importmap">
            {
              "imports": {
-          "@splinetool/runtime": "https://unpkg.com/@splinetool/runtime@0.9.239/build/runtime.js"
+          "@splinetool/runtime": "https://cdn.spline.design/@splinetool/runtime@2.0.133/build/runtime.js"
         }
            }
 
@@ -96,11 +97,21 @@
             <span class="story-start-icon">▶</span> Commencer l'aventure
         </button>
         <a class="story-skip" href="#resume">Passer l'aventure <i class="bi bi-arrow-down"></i></a>
+        <button class="scene-explore" type="button" data-explore-scene aria-pressed="false">
+            <i class="bi bi-boxes"></i> Explorer la scène 3D
+        </button>
         <a class="hero-contact" href="mailto:joshuatangtonghi@icloud.com"><i class="bi bi-envelope"></i> Me contacter</a>
         <a class="linktree-qr" href="https://linktr.ee/joshuatangtonghi" target="_blank" rel="noopener">
             <img src="assets/img/linktree.png" width="300" height="300" loading="lazy" alt="QR code vers le Linktree de Joshua Tang Tong Hi">
             <span>Scanner pour découvrir mes liens</span>
         </a>
+    </div>
+    <div class="scene-exploration" data-scene-exploration aria-hidden="true">
+        <iframe id="spline-explorer-frame" title="Scène 3D interactive" loading="lazy"
+                allow="fullscreen; pointer-lock" src="about:blank"></iframe>
+        <p class="scene-exploration-status" data-scene-status role="status">Préparation de la scène 3D…</p>
+        <p class="scene-exploration-hint">Glisse pour tourner · molette ou pincement pour zoomer</p>
+        <button class="scene-exit" type="button" data-scene-exit>Quitter <span aria-hidden="true">×</span></button>
     </div>
 </section><!-- End Hero -->
 

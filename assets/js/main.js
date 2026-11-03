@@ -275,6 +275,92 @@
   }
 
   /**
+   * Optional Spline scene exploration mode.
+   */
+  const hero = select('#hero')
+  const exploreButtons = select('[data-explore-scene]', true)
+  const sceneExploration = select('[data-scene-exploration]')
+  const sceneStatus = select('[data-scene-status]')
+  const sceneExit = select('[data-scene-exit]')
+  const sceneFrame = select('#spline-explorer-frame')
+  const sceneEmbedUrl = 'https://my.spline.design/macbookprocopy-718e9d1626c81ed47764e6ceeffef5df/'
+  let sceneExploring = false
+  let sceneFrameTimeout = 0
+
+  const setSceneStatus = (message) => {
+    if (sceneStatus) sceneStatus.textContent = message
+  }
+
+  const setSceneMode = (enabled) => {
+    sceneExploring = enabled
+    hero?.classList.toggle('scene-exploring', enabled)
+    sceneExploration?.setAttribute('aria-hidden', String(!enabled))
+    exploreButtons.forEach((button) => {
+      button.setAttribute('aria-pressed', String(enabled))
+    })
+    if (enabled) {
+      setSceneStatus('Scène prête : interaction activée.')
+      window.portfolioSpline?.resumeScene()
+      canvas?.focus()
+    } else {
+      window.portfolioSpline?.pauseScene()
+      window.clearTimeout(sceneFrameTimeout)
+      if (sceneFrame) sceneFrame.src = 'about:blank'
+    }
+  }
+
+  const enterSceneMode = () => {
+    setSceneMode(true)
+    setSceneStatus('Chargement de la scène 3D…')
+    if (!sceneFrame) {
+      setSceneMode(false)
+      setSceneStatus('Impossible de charger la scène 3D.')
+      return
+    }
+    sceneFrameTimeout = window.setTimeout(() => {
+      setSceneMode(false)
+      setSceneStatus('Impossible de charger la scène 3D.')
+      exploreButtons.forEach((button) => button.remove())
+    }, 10000)
+    sceneFrame.onload = () => {
+      window.clearTimeout(sceneFrameTimeout)
+      setSceneStatus('Scène prête : glisse pour tourner, molette ou pincement pour zoomer.')
+    }
+    sceneFrame.src = sceneEmbedUrl
+  }
+
+  const exitSceneMode = () => {
+    setSceneMode(false)
+    window.portfolioSpline?.resumeScene()
+  }
+
+  const canvas = select('#canvas3d')
+  exploreButtons.forEach((button) => button.addEventListener('click', () => {
+    sceneExploring ? exitSceneMode() : enterSceneMode()
+  }))
+  sceneExit?.addEventListener('click', exitSceneMode)
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && sceneExploring) exitSceneMode()
+  })
+
+  const sceneObserver = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      if (!sceneExploring) window.portfolioSpline?.resumeScene()
+    } else {
+      window.portfolioSpline?.pauseScene()
+    }
+  }, { threshold: 0.05 })
+  if (hero) sceneObserver.observe(hero)
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      window.portfolioSpline?.pauseScene()
+    } else if (sceneExploring || hero?.getBoundingClientRect().bottom > 0) {
+      window.portfolioSpline?.resumeScene()
+    }
+  })
+
+  /**
    * Skills animation
    */
   let skilsContent = select('.skills-content');
