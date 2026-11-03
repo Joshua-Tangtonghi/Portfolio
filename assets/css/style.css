@@ -2199,9 +2199,21 @@ body.scene-exploring {
   margin: 0;
 }
 
-.scene-exploration-status {
+#hero .scene-exploration-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  max-width: calc(100% - 130px);
+  padding: 7px 12px;
+  border: 1px solid rgba(246, 201, 120, 0.35);
+  border-radius: 999px;
+  background: rgba(9, 7, 13, 0.72);
   color: var(--portfolio-gold);
-  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .scene-exit {
@@ -2375,6 +2387,10 @@ body.scene-exploring {
     padding: 18px 12px;
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .scene-exploration-status {
+    max-width: calc(100% - 24px);
   }
 }
 

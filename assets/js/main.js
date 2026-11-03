@@ -319,7 +319,7 @@
       button.setAttribute('aria-pressed', String(enabled))
     })
     if (enabled) {
-      setSceneStatus('Scène prête : interaction activée.')
+      setSceneStatus('Scène prête')
       window.portfolioSpline?.resumeScene()
       canvas?.focus()
     } else {
@@ -344,7 +344,7 @@
     }, 10000)
     sceneFrame.onload = () => {
       window.clearTimeout(sceneFrameTimeout)
-      setSceneStatus('Scène prête : glisse pour tourner, molette ou pincement pour zoomer.')
+      setSceneStatus('Scène prête')
     }
     sceneFrame.src = sceneEmbedUrl
   }
