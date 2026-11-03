@@ -1852,6 +1852,37 @@ section,
   transform: translateY(-3px);
 }
 
+.linktree-qr {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 28px 0 0 12px;
+  padding: 8px 14px 8px 8px;
+  border: 1px solid rgba(246, 201, 120, 0.45);
+  border-radius: 12px;
+  color: #f8eef2 !important;
+  background: rgba(9, 7, 13, 0.5);
+  font-size: 12px;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.linktree-qr img {
+  display: block;
+  width: 58px;
+  height: 58px;
+  padding: 4px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.linktree-qr:hover {
+  border-color: #f6c978;
+  transform: translateY(-3px);
+}
+
 .story-section {
   position: relative;
   overflow: hidden;
