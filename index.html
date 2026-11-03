@@ -300,18 +300,20 @@
                         <p>Formation en ligne · 2021</p>
                     </div>
                 </div>
-                <div class="resume-card">
+                <div class="resume-card resume-card-wide">
                     <span class="resume-label">Compétences techniques</span>
-                    <div class="skill-tags">
-                        <span>JavaScript</span><span>HTML / CSS</span><span>PHP</span>
-                        <span>C / C#</span><span>C++</span><span>Python</span><span>Rust</span>
-                        <span>Java</span><span>Node.js</span><span>Git</span><span>Unity</span>
-                        <span>Unreal Engine</span><span>Blender</span><span>Linux</span><span>SQL</span>
+                    <div class="skill-category-grid">
+                        <div class="skill-category-block"><h3>Game Development</h3><div class="skill-tags"><span>Unity</span><span>C#</span><span>ECS</span><span>Burst Compiler</span></div></div>
+                        <div class="skill-category-block"><h3>Programming</h3><div class="skill-tags"><span>C</span><span>C++</span><span>PHP</span><span>JavaScript</span></div></div>
+                        <div class="skill-category-block"><h3>Artificial Intelligence</h3><div class="skill-tags"><span>Q-learning</span><span>Reinforcement Learning</span><span>Algorithmes évolutionnaires</span></div></div>
+                        <div class="skill-category-block"><h3>3D &amp; Graphics</h3><div class="skill-tags"><span>Blender</span><span>OpenGL</span><span>Mathématiques 3D</span></div></div>
+                        <div class="skill-category-block"><h3>Web Development</h3><div class="skill-tags"><span>HTML</span><span>CSS</span><span>PHP</span><span>JavaScript</span></div></div>
+                        <div class="skill-category-block"><h3>Audio</h3><div class="skill-tags"><span>FL Studio</span><span>Enregistrement</span><span>Mixage</span></div></div>
                     </div>
+                    <p class="resume-muted resume-subtitle">Pratique complémentaire / expérimentation</p>
+                    <div class="skill-tags"><span>Python</span><span>Java</span><span>Rust</span><span>Node.js</span><span>Unreal Engine</span><span>SQL</span></div>
                     <p class="resume-muted resume-subtitle">Méthodes</p>
-                    <div class="skill-tags">
-                        <span>Agile</span><span>Scrum</span><span>Gestion de projet</span>
-                    </div>
+                    <div class="skill-tags"><span>Agile</span><span>Scrum</span><span>Gestion de projet</span><span>Git</span></div>
                 </div>
                 <div class="resume-card resume-card-wide">
                     <span class="resume-label">Projets techniques</span>
@@ -383,52 +385,71 @@
                 </div>
             </div>
 
+            <h3 class="portfolio-group-title">Projets principaux</h3>
             <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-                <div class="col-lg-4 col-md-6 portfolio-item filter-vr">
+                <div class="col-lg-6 portfolio-item filter-vr featured-project">
                     <div class="portfolio-wrap project-placeholder case-card">
                         <div class="portfolio-info always-visible">
-                            <span class="project-category">VR</span><h4>Jeu VR RTS multijoueur</h4>
+                            <span class="project-category">VR · Projet principal</span><h4>Jeu VR RTS multijoueur</h4>
                             <p>Projet de groupe inspiré de Clash Royale, avec architecture ECS et cartes dynamiques.</p>
-                            <ul class="project-tech"><li>Unity</li><li>C#</li><li>ECS</li></ul>
+                            <ul class="project-tech"><li>Unity</li><li>C#</li><li>ECS</li><li>Burst Compiler</li></ul>
                             <a class="case-link" href="jeu-vr-rts.html">Voir l'étude de cas</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item filter-game">
+                <div class="col-lg-6 portfolio-item filter-ai featured-project">
+                    <div class="portfolio-wrap project-placeholder case-card">
+                        <div class="portfolio-info always-visible">
+                            <span class="project-category">IA · Projet principal</span><h4>Falcon IA</h4>
+                            <p>Agent autonome combinant Q-learning et algorithmes évolutionnaires, classé quatrième en tournoi.</p>
+                            <ul class="project-tech"><li>Q-learning</li><li>Reinforcement Learning</li><li>Évolution</li></ul>
+                            <a class="case-link" href="ia-q-learning.html">Voir l'étude de cas</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 portfolio-item filter-game featured-project">
                     <div class="portfolio-wrap">
                         <img src="assets/img/portfolio/Tetris1.jpg" class="img-fluid" width="640" height="480" loading="lazy" alt="Aperçu du Tetris multijoueur">
-                        <div class="portfolio-info"><span class="project-category">Game</span><h4>Tetris multijoueur</h4><p>Un jeu de Tetris développé en C avec une dimension multijoueur.</p><ul class="project-tech"><li>C</li><li>Réseau</li></ul><div class="portfolio-links"><a href="https://github.com/Joshua-Tangtonghi/C-Tetris-Multiplayer" title="GitHub"><i class="bi bi-github"></i></a><a href="Tetris.html" title="Étude de cas"><i class="bx bx-link"></i></a></div></div>
+                        <div class="portfolio-info"><span class="project-category">Game · Projet principal</span><h4>Tetris multijoueur</h4><p>Jeu en C avec interface SDL2 et architecture client-serveur.</p><ul class="project-tech"><li>C</li><li>SDL2</li><li>Winsock2</li></ul><div class="portfolio-links"><a href="https://github.com/Joshua-Tangtonghi/C-Tetris-Multiplayer" title="GitHub"><i class="bi bi-github"></i></a><a href="Tetris.html" title="Étude de cas"><i class="bx bx-link"></i></a></div></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 portfolio-item filter-game featured-project">
+                    <div class="portfolio-wrap project-placeholder case-card">
+                        <div class="portfolio-info always-visible">
+                            <span class="project-category">Game · Projet principal</span><h4>H2Oasis</h4>
+                            <p>Jeu de Game Jam où un barman purifie des verres avec un contrôleur alternatif.</p>
+                            <ul class="project-tech"><li>Unity</li><li>C#</li><li>Photoshop</li></ul>
+                            <a class="case-link" href="controles-alternatifs.html">Voir l'étude de cas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="portfolio-group-title">Projets secondaires</h3>
+            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="250">
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" width="640" height="480" loading="lazy" alt="Aperçu du projet annuel 2022">
+                        <div class="portfolio-info"><span class="project-category">Web</span><h4>Annual project 2022</h4><p>Plateforme full-stack de gestion des associations étudiantes.</p><ul class="project-tech"><li>PHP</li><li>JavaScript</li><li>CSS</li></ul><div class="portfolio-links"><a href="https://github.com/Joshua-Tangtonghi/Annual-project-2022" title="GitHub"><i class="bi bi-github"></i></a><a href="annual_projetc_2022.html" title="Étude de cas"><i class="bx bx-link"></i></a></div></div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                     <div class="portfolio-wrap">
                         <img src="assets/img/portfolio/pokemon1.jpg" class="img-fluid" width="640" height="480" loading="lazy" alt="Aperçu du projet Pokédex">
-                        <div class="portfolio-info"><span class="project-category">Web</span><h4>Pokédex</h4><p>Une interface web pour consulter et organiser des données de Pokémon.</p><ul class="project-tech"><li>PHP</li><li>HTML</li><li>CSS</li></ul><div class="portfolio-links"><a href="https://github.com/Joshua-Tangtonghi/pokedex" title="GitHub"><i class="bi bi-github"></i></a><a href="pokemon.html" title="Étude de cas"><i class="bx bx-link"></i></a></div></div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                    <div class="portfolio-wrap">
-                        <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" width="640" height="480" loading="lazy" alt="Aperçu du projet annuel 2022">
-                        <div class="portfolio-info"><span class="project-category">Web</span><h4>Annual project 2022</h4><p>Un projet web réalisé autour d'un site fonctionnel et de sa logique serveur.</p><ul class="project-tech"><li>PHP</li><li>HTML</li><li>CSS</li></ul><div class="portfolio-links"><a href="https://github.com/Joshua-Tangtonghi/Annual-project-2022" title="GitHub"><i class="bi bi-github"></i></a><a href="annual_projetc_2022.html" title="Étude de cas"><i class="bx bx-link"></i></a></div></div>
+                        <div class="portfolio-info"><span class="project-category">Web</span><h4>Pokédex</h4><p>Application web collaborative avec profils et collections personnelles.</p><ul class="project-tech"><li>PHP</li><li>HTML</li><li>CSS</li></ul><div class="portfolio-links"><a href="https://github.com/Joshua-Tangtonghi/pokedex" title="GitHub"><i class="bi bi-github"></i></a><a href="pokemon.html" title="Étude de cas"><i class="bx bx-link"></i></a></div></div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-3d">
                     <div class="portfolio-wrap">
                         <img src="assets/img/portfolio/Stage1.jpg" class="img-fluid" width="640" height="480" loading="lazy" alt="Aperçu du projet de modélisation 3D">
-                        <div class="portfolio-info"><span class="project-category">3D</span><h4>Stage 3D</h4><p>Un projet de modélisation et d'animation 3D réalisé avec Blender.</p><ul class="project-tech"><li>Blender</li><li>Modélisation</li></ul><div class="portfolio-links"><a href="Stage_3d.html" title="Étude de cas"><i class="bx bx-link"></i></a></div></div>
+                        <div class="portfolio-info"><span class="project-category">3D</span><h4>Stage 3D</h4><p>Retranscription d'un personnage 2D en modèle 3D avec Blender.</p><ul class="project-tech"><li>Blender</li><li>Texturing</li></ul><div class="portfolio-links"><a href="Stage_3d.html" title="Étude de cas"><i class="bx bx-link"></i></a></div></div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item filter-game">
-                    <div class="portfolio-wrap project-placeholder case-card"><div class="portfolio-info always-visible"><span class="project-category">Game</span><h4>H2Oasis</h4><p>Jeu de Game Jam où un barman purifie des verres avec un contrôleur alternatif.</p><ul class="project-tech"><li>Unity</li><li>Photoshop</li></ul><a class="case-link" href="controles-alternatifs.html">Voir l'étude de cas</a></div></div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item filter-ai">
-                    <div class="portfolio-wrap project-placeholder case-card"><div class="portfolio-info always-visible"><span class="project-category">IA</span><h4>Falcon IA</h4><p>Agent autonome combinant Q-learning, récompenses et évolution darwinienne.</p><ul class="project-tech"><li>Q-learning</li><li>Algorithmes évolutionnaires</li></ul><a class="case-link" href="ia-q-learning.html">Voir l'étude de cas</a></div></div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-3d">
+                    <div class="portfolio-wrap project-placeholder case-card"><div class="portfolio-info always-visible"><span class="project-category">3D</span><h4>Animation Blender d'1 minute</h4><p>Production d'une séquence animée complète avec Blender.</p><ul class="project-tech"><li>Blender</li><li>Animation</li></ul><a class="case-link" href="animation-blender.html">Voir l'étude de cas</a></div></div>
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-3d">
-                    <div class="portfolio-wrap project-placeholder case-card"><div class="portfolio-info always-visible"><span class="project-category">3D</span><h4>Animation Blender d'1 minute</h4><p>Une animation courte et un travail de modélisation réalisés avec Blender.</p><ul class="project-tech"><li>Blender</li><li>Animation</li></ul><a class="case-link" href="animation-blender.html">Voir l'étude de cas</a></div></div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item filter-3d">
-                    <div class="portfolio-wrap project-placeholder case-card"><div class="portfolio-info always-visible"><span class="project-category">3D</span><h4>Quaternions et OpenGL</h4><p>Une exploration des rotations 3D et de la modélisation avec OpenGL.</p><ul class="project-tech"><li>OpenGL</li><li>Quaternions</li></ul><a class="case-link" href="mathematiques-opengl.html">Voir l'étude de cas</a></div></div>
+                    <div class="portfolio-wrap project-placeholder case-card"><div class="portfolio-info always-visible"><span class="project-category">3D</span><h4>Quaternions et OpenGL</h4><p>Exploration des rotations 3D et de la programmation graphique.</p><ul class="project-tech"><li>OpenGL</li><li>Quaternions</li></ul><a class="case-link" href="mathematiques-opengl.html">Voir l'étude de cas</a></div></div>
                 </div>
 <!--                <div class="col-lg-4 col-md-6 portfolio-item filter-card">-->
 <!--                    <div class="portfolio-wrap">-->
@@ -551,6 +572,7 @@
         <p><a href="https://github.com/Joshua-Tangtonghi">GitHub</a> · <a href="https://linktr.ee/joshuatangtonghi">Linktree</a></p>
         <h2>Contact</h2>
         <p><a href="mailto:joshuatangtonghi@icloud.com">joshuatangtonghi@icloud.com</a></p>
+        <p class="direct-link-placeholder">LinkedIn : URL à compléter</p>
     </div>
 </footer><!-- End Footer -->
 
