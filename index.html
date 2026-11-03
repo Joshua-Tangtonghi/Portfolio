@@ -66,6 +66,7 @@
             </li>
             <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projets</span></a>
             </li>
+            <li><button class="nav-link scene-explore-trigger" type="button" data-scene-explore><i class="bx bx-cube-alt"></i> <span>Explorer la scène 3D</span></button></li>
             <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
             <li><button class="language-toggle" type="button" aria-label="Changer de langue">FR / EN</button></li>
         </ul>
@@ -109,6 +110,11 @@
                 </a>
             </div>
             <div class="col-12 col-md-auto">
+                <button class="btn btn-outline-light d-inline-flex align-items-center gap-2" type="button" data-scene-explore aria-pressed="false">
+                    <i class="bi bi-boxes"></i> Explorer la scène 3D
+                </button>
+            </div>
+            <div class="col-12 col-md-auto">
                 <a class="d-inline-flex align-items-center gap-2 p-2 rounded-3 border border-warning text-light text-decoration-none" href="https://linktr.ee/joshuatangtonghi" target="_blank" rel="noopener">
                     <img src="assets/img/linktree.png" width="58" height="58" loading="lazy" alt="QR code vers le Linktree de Joshua Tang Tong Hi">
                     <span>Scanner pour découvrir mes liens</span>
@@ -117,6 +123,18 @@
         </div>
     </div>
 </section><!-- End Hero -->
+
+<div id="scene-exploration" class="scene-exploration" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="scene-exploration-title">
+    <div class="scene-exploration-toolbar">
+        <div>
+            <h2 id="scene-exploration-title">Exploration de la scène 3D</h2>
+            <p>Glisse pour tourner · molette pour zoomer · Échap pour quitter</p>
+        </div>
+        <button class="btn btn-outline-light" type="button" data-scene-exit>Quitter</button>
+    </div>
+    <p class="scene-exploration-status" data-scene-status role="status">Chargement de la scène…</p>
+    <iframe title="Scène 3D interactive du portfolio" data-scene-frame loading="lazy" allow="fullscreen; autoplay"></iframe>
+</div>
 
 <main id="main">
 
