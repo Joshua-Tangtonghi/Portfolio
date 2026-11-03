@@ -48,9 +48,12 @@
     caseStudy.querySelector('.case-meta')?.after(toc);
   }
 
-  sections.forEach((section) => {
+  sections.forEach((section, index) => {
     section.classList.add('case-section-reveal');
+    section.style.transitionDelay = `${index * 70}ms`;
   });
+
+  caseStudy.classList.add('case-ready');
 
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
@@ -62,9 +65,15 @@
           link?.setAttribute('aria-current', 'location');
         }
       });
-    }, { rootMargin: '-15% 0px -65% 0px', threshold: 0 });
+    }, { rootMargin: '-10% 0px -20% 0px', threshold: 0.05 });
 
     sections.forEach((section) => observer.observe(section));
+    requestAnimationFrame(() => {
+      const firstSection = sections[0];
+      if (firstSection && firstSection.getBoundingClientRect().top < window.innerHeight) {
+        firstSection.classList.add('is-visible');
+      }
+    });
   } else {
     sections.forEach((section) => section.classList.add('is-visible'));
   }
