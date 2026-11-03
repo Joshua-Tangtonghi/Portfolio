@@ -147,6 +147,88 @@
   }
 
   /**
+   * Interactive portfolio loading screen
+   */
+  const loadingScreen = select('#loading-screen')
+  if (loadingScreen) {
+    window.addEventListener('load', () => {
+      window.setTimeout(() => loadingScreen.classList.add('is-loaded'), 1400)
+    })
+  }
+
+  /**
+   * Narrative portfolio chapters
+   */
+  const storyChapters = select('[data-story-chapter]', true)
+  const storyTitle = select('[data-story-title]')
+  const storyText = select('[data-story-text]')
+  const storyPrompt = select('[data-story-prompt]')
+  const storyNumber = select('.story-panel-number')
+  const storyProgress = select('.story-progress-fill')
+  const storyNext = select('[data-story-next]')
+  const storyStart = select('[data-story-start]')
+
+  const storyData = [
+    {
+      title: 'Le déclic',
+      text: "Tout commence par l'envie de comprendre comment les mondes numériques prennent vie, puis de les rendre réels avec mes propres outils.",
+      prompt: 'Quelle piste veux-tu suivre ?'
+    },
+    {
+      title: 'Construire',
+      text: "Du Tetris multijoueur au développement web, j'apprends en construisant des projets concrets, en équipe comme en autonomie.",
+      prompt: 'Le code devient un terrain de jeu.'
+    },
+    {
+      title: 'Explorer',
+      text: "La 3D, la réalité virtuelle et les mathématiques OpenGL m'ont appris à penser en volumes, en interactions et en expériences.",
+      prompt: "L'immersion ouvre une nouvelle dimension."
+    },
+    {
+      title: 'Créer',
+      text: "Entre musique, IA et prototypes de jeux, je relie la technique à la créativité pour donner une identité forte à chaque projet.",
+      prompt: "Tu connais maintenant mon parcours."
+    }
+  ]
+
+  const selectStoryChapter = (index) => {
+    const data = storyData[index]
+    if (!data || !storyTitle || !storyText) return
+
+    storyChapters.forEach((chapter, chapterIndex) => {
+      chapter.classList.toggle('is-active', chapterIndex === index)
+    })
+    storyNumber.textContent = `CHAPITRE ${String(index + 1).padStart(2, '0')}`
+    storyTitle.textContent = data.title
+    storyText.textContent = data.text
+    storyPrompt.textContent = data.prompt
+    storyProgress.style.width = `${((index + 1) / storyData.length) * 100}%`
+    storyNext.innerHTML = index === storyData.length - 1
+      ? 'Rejouer <i class="bi bi-arrow-repeat"></i>'
+      : 'Continuer <i class="bi bi-arrow-right"></i>'
+  }
+
+  if (storyChapters.length) {
+    storyChapters.forEach((chapter, index) => {
+      chapter.addEventListener('click', () => selectStoryChapter(index))
+    })
+  }
+
+  if (storyNext) {
+    storyNext.addEventListener('click', () => {
+      const currentIndex = storyChapters.findIndex(chapter => chapter.classList.contains('is-active'))
+      selectStoryChapter((currentIndex + 1) % storyData.length)
+    })
+  }
+
+  if (storyStart) {
+    storyStart.addEventListener('click', () => {
+      const story = select('#story')
+      if (story) story.scrollIntoView({ behavior: 'smooth' })
+    })
+  }
+
+  /**
    * Skills animation
    */
   let skilsContent = select('.skills-content');
