@@ -275,6 +275,49 @@
   }
 
   /**
+   * Spline scene exploration
+   */
+  const sceneExploration = select('#scene-exploration')
+  const sceneFrame = select('[data-scene-frame]')
+  const sceneStatus = select('[data-scene-status]')
+  const sceneExploreTriggers = select('[data-scene-explore]', true)
+  const sceneExit = select('[data-scene-exit]')
+  const sceneUrl = 'https://my.spline.design/macbookprocopy-718e9d1626c81ed47764e6ceeffef5df/'
+  let sceneWasLoaded = false
+
+  const closeSceneExploration = () => {
+    if (!sceneExploration) return
+    sceneExploration.classList.remove('is-open')
+    sceneExploration.setAttribute('aria-hidden', 'true')
+    document.body.classList.remove('scene-exploring')
+    sceneExploreTriggers.forEach(trigger => trigger.setAttribute('aria-pressed', 'false'))
+    if (sceneFrame) sceneFrame.src = 'about:blank'
+  }
+
+  const openSceneExploration = () => {
+    if (!sceneExploration || !sceneFrame) return
+    sceneExploration.classList.add('is-open')
+    sceneExploration.setAttribute('aria-hidden', 'false')
+    document.body.classList.add('scene-exploring')
+    sceneExploreTriggers.forEach(trigger => trigger.setAttribute('aria-pressed', 'true'))
+    sceneStatus.textContent = 'Chargement de la scène…'
+    sceneFrame.addEventListener('load', () => {
+      sceneStatus.textContent = 'Scène prête.'
+    }, { once: true })
+    sceneFrame.src = sceneUrl
+    sceneWasLoaded = true
+    sceneExit?.focus()
+  }
+
+  sceneExploreTriggers.forEach(trigger => trigger.addEventListener('click', openSceneExploration))
+  sceneExit?.addEventListener('click', closeSceneExploration)
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && sceneExploration?.classList.contains('is-open')) {
+      closeSceneExploration()
+    }
+  })
+
+  /**
    * Skills animation
    */
   let skilsContent = select('.skills-content');

@@ -207,6 +207,13 @@ h6 {
   color: #939597;
 }
 
+.nav-menu .scene-explore-trigger {
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+}
+
 @media (min-width: 992px) {
 
   .nav-menu a,
@@ -2251,6 +2258,75 @@ button:focus-visible,
 
 #canvas3d {
   pointer-events: none;
+}
+
+.scene-exploration {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(18px, 4vw, 42px);
+  background: #09070d;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity .25s ease, visibility .25s ease;
+}
+
+.scene-exploration.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.scene-exploration-toolbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 14px;
+}
+
+.scene-exploration-toolbar h2 {
+  margin: 0;
+  color: var(--portfolio-gold);
+  font-size: clamp(1.25rem, 3vw, 2rem);
+}
+
+.scene-exploration-toolbar p,
+.scene-exploration-status {
+  margin: 6px 0 0;
+  color: #fff;
+}
+
+.scene-exploration-status {
+  color: var(--portfolio-coral);
+}
+
+.scene-exploration iframe {
+  width: 100%;
+  min-height: 0;
+  flex: 1;
+  border: 1px solid rgba(246, 201, 120, .4);
+  border-radius: 14px;
+  background: #111;
+}
+
+body.scene-exploring {
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .scene-exploration-toolbar {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scene-exploration {
+    transition: none;
+  }
 }
 
 #loading-screen {
