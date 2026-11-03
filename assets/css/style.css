@@ -925,6 +925,31 @@ section {
   border-color: #f6c978;
 }
 
+.case-toc a[aria-current="location"] {
+  background: rgba(246, 201, 120, .18);
+  border-color: #f6c978;
+  color: #fff !important;
+}
+
+.case-section-reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .45s ease, transform .45s ease, border-color .25s ease, background-color .25s ease;
+}
+
+.case-section-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .case-section-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 .case-study section {
   background: rgba(255, 255, 255, .035);
   border: 1px solid rgba(246, 201, 120, .18);
