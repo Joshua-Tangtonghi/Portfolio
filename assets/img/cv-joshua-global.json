@@ -1,0 +1,168 @@
+{
+  "lang": "fr",
+  "page_format": "a4",
+  "candidate": {
+    "name": "Tang tong hi Joshua",
+    "email": "joshuatangtonghi@icloud.com",
+    "location": "Arpajon, France, Île de France",
+    "summary": "Profil junior polyvalent en support informatique, administration technique, développement interactif et production audio. Expérience en support utilisateurs chez JobTeaser, formation ESGI en développement logiciel, réalité virtuelle et jeux vidéo, ainsi que pratique de la production sonore."
+  },
+  "sections": {
+    "summary": "Profil",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "education": "Formation",
+    "skills": "Compétences"
+  },
+  "summary": "Profil junior polyvalent en support informatique, administration technique, développement interactif et production audio. Expérience en support utilisateurs chez JobTeaser, formation ESGI en développement logiciel, réalité virtuelle et jeux vidéo, ainsi que pratique de la production sonore.",
+  "experience": [
+    {
+      "company": "NSX RECORDZ",
+      "role": "Sound Engineer",
+      "location": "Location not specified",
+      "dates": "July 8 – July 23, 2026",
+      "bullets": [
+        "Configuration et vérification d'équipements audio.",
+        "Gestion de l'enregistrement, du routing et du traitement audio.",
+        "Participation au mixage et au mastering de productions sonores."
+      ]
+    },
+    {
+      "company": "JobTeaser",
+      "role": "IT Support",
+      "location": "Location not specified",
+      "dates": "September 2023 – 2024",
+      "bullets": [
+        "Support informatique auprès des utilisateurs.",
+        "Résolution de problèmes techniques avec communication, rigueur et sens du service."
+      ]
+    },
+    {
+      "company": "Latchi",
+      "role": "3D Modeling Assistant (Internship)",
+      "location": "Location not specified",
+      "dates": "July – August 2022",
+      "bullets": [
+        "Participation à un environnement de production technique en 3D."
+      ]
+    },
+    {
+      "company": "Centre de loisirs",
+      "role": "Activity Leader (BAFA certified)",
+      "location": "Location not specified",
+      "dates": "August 2021",
+      "bullets": [
+        "Encadrement d'activités et communication avec des publics variés."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Jeu RTS multijoueur en réalité virtuelle",
+      "badge": "",
+      "description": "Développement d'un jeu de stratégie en temps réel multijoueur dans un environnement de réalité virtuelle.",
+      "tech": "Unity, C#",
+      "url": ""
+    },
+    {
+      "name": "Jeux vidéo et prototypes interactifs",
+      "badge": "",
+      "description": "Création et publication de jeux vidéo à contrôles alternatifs sur itch.io.",
+      "tech": "Unity, C#",
+      "url": ""
+    },
+    {
+      "name": "Projets de programmation",
+      "badge": "",
+      "description": "Développement d'un jeu de Tetris et d'un jeu inspiré de Worms.",
+      "tech": "C, Python",
+      "url": ""
+    },
+    {
+      "name": "Production musicale",
+      "badge": "",
+      "description": "Composition, enregistrement, mixage et mastering de morceaux originaux publiés sur SoundCloud.",
+      "tech": "FL Studio",
+      "url": ""
+    }
+  ],
+  "skills": [
+    {
+      "category": "Support et administration informatique",
+      "items": [
+        "Support utilisateurs",
+        "Diagnostic et résolution de problèmes",
+        "Installation et configuration d'équipements",
+        "Administration Windows",
+        "Administration serveurs",
+        "Configuration réseau",
+        "Administration du stockage",
+        "Outils de ticketing",
+        "Rédaction de procédures techniques",
+        "Linux"
+      ]
+    },
+    {
+      "category": "Développement, jeu vidéo et 3D",
+      "items": [
+        "C#",
+        "C",
+        "C++",
+        "Python",
+        "JavaScript",
+        "PHP",
+        "Node.js",
+        "Unity",
+        "Unreal Engine",
+        "Réalité virtuelle",
+        "Gameplay",
+        "Blender",
+        "OpenGL",
+        "Modélisation 3D"
+      ]
+    },
+    {
+      "category": "Audio",
+      "items": [
+        "FL Studio",
+        "Enregistrement",
+        "Routing audio",
+        "Traitement audio et effets",
+        "Sound design",
+        "Mixage",
+        "Mastering de base",
+        "Configuration et vérification de matériel audio"
+      ]
+    },
+    {
+      "category": "Outils et méthodes",
+      "items": [
+        "Git",
+        "JetBrains Suite",
+        "GitKraken",
+        "Gestion de projet Agile",
+        "Scrum"
+      ]
+    },
+    {
+      "category": "Qualités",
+      "items": [
+        "Travail en équipe",
+        "Communication",
+        "Résolution de problèmes",
+        "Autonomie",
+        "Rigueur",
+        "Apprentissage rapide"
+      ]
+    },
+    {
+      "category": "Langues",
+      "items": [
+        "Français — langue maternelle",
+        "Anglais — TOEIC",
+        "Allemand — A1"
+      ]
+    }
+  ],
+  "education": []
+}
