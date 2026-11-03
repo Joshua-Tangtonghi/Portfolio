@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Portfolio Tang tong hi Joshua</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <title>Joshua Tang Tong Hi | Développeur jeux vidéo & VR</title>
+    <meta content="Joshua Tang Tong Hi, développeur jeux vidéo & VR (bachelor ESGI). Projets Unity, C#, Python, 3D et production musicale." name="description">
+    <meta content="Joshua Tang Tong Hi, développeur, portfolio, GitHub, web, C#, C, PHP, 3D" name="keywords">
+    <meta name="author" content="Joshua Tang Tong Hi">
+    <link rel="canonical" href="https://joshua-tangtonghi.netlify.app/">
+    <meta property="og:title" content="Joshua Tang Tong Hi | Développeur jeux vidéo & VR">
+    <meta property="og:description" content="Joshua Tang Tong Hi, développeur jeux vidéo & VR (bachelor ESGI). Projets Unity, C#, Python, 3D et production musicale.">
+    <meta property="og:image" content="https://joshua-tangtonghi.netlify.app/assets/img/portfolio-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://joshua-tangtonghi.netlify.app">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Joshua Tang Tong Hi | Développeur jeux vidéo & VR">
+    <meta name="twitter:description" content="Joshua Tang Tong Hi, développeur jeux vidéo & VR (bachelor ESGI). Projets Unity, C#, Python, 3D et production musicale.">
+    <meta name="twitter:image" content="https://joshua-tangtonghi.netlify.app/assets/img/portfolio-preview.png">
 
     <!-- Favicons -->
-    <link href="assets/img/jt.png" rel="icon">
-    <link class="bi bi-browser-chrome" rel="apple-touch-icon">
+    <link href="assets/img/jt.png" rel="icon" type="image/png">
+    <link href="assets/img/jt.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -31,6 +44,13 @@
 
 <body>
 
+<div id="loading-screen" aria-label="Chargement du portfolio">
+    <div class="loading-mark">JT</div>
+    <p>Initialisation de l'expérience</p>
+    <div class="loading-track"><span></span></div>
+    <small>Chargement des chapitres<span class="loading-dots">...</span></small>
+</div>
+
 <!-- ======= Mobile nav toggle button ======= -->
 <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
 <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
@@ -39,26 +59,16 @@
 
     <nav id="navbar" class="navbar nav-menu">
         <ul>
-            <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-            <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-            <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a>
+            <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Accueil</span></a></li>
+            <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>À propos</span></a></li>
+            <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>CV</span></a>
             </li>
-            <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a>
+            <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projets</span></a>
             </li>
         </ul>
     </nav><!-- .nav-menu -->
 
 </header><!-- End Header -->
-<script type="text/javascript">
-
-    $(document).ready(function(){
-        var allowed_brower = ['chrome', 'firefox', 'mozilla'];
-        if (allowed_brower.indexOf($.browser.name) === -1) {
-            alert("Votre navigateur n'est pas compatible avec ce site. Veuillez installer une version récente de Google Chrome, Firefox ou Microsoft Edge pour y accéder.")
-        }
-    });
-
-</script>
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex flex-column justify-content-center">
 
@@ -74,27 +84,69 @@
     </script>
     <script type="module" src="assets/js/spline.js"></script>
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
-        <h1>TANG TONG HI Joshua</h1>
-        <p>I'm <span class="typed" data-typed-items="a Developer,a Musician, a Gamer,a 3d artist"></span></p>
+        <p class="eyebrow">PORTFOLIO PERSONNEL</p>
+        <h1>Joshua Tang Tong Hi</h1>
+        <p>Je suis <span class="typed" data-typed-items="développeur,créateur 3D,concepteur de jeux vidéo"></span></p>
         <div class="social-links">
-            <a href="https://linktr.ee/joshuatangtonghi">
-                <img src="assets/img/linktree.png" class="img-fluid" alt="style" style="width: 100px"/>
-            </a>
-
+            <a href="https://github.com/Joshua-Tangtonghi" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://linktr.ee/joshuatangtonghi" aria-label="Linktree"><i class="bi bi-link-45deg"></i></a>
         </div>
+        <button class="story-start" type="button" data-story-start>
+            <span class="story-start-icon">▶</span> Commencer l'aventure
+        </button>
+        <a class="hero-contact" href="mailto:joshuatangtonghi@icloud.com"><i class="bi bi-envelope"></i> Me contacter</a>
+        <a class="linktree-qr" href="https://linktr.ee/joshuatangtonghi" target="_blank" rel="noopener">
+            <img src="assets/img/linktree.png" alt="QR code vers le Linktree de Joshua Tang Tong Hi">
+            <span>Scanner pour découvrir mes liens</span>
+        </a>
     </div>
 </section><!-- End Hero -->
 
 <main id="main">
+
+    <section id="story" class="story-section">
+        <div class="container">
+            <div class="section-title">
+                <p class="story-kicker">MODE DÉCOUVERTE · QTE</p>
+                <h2>Mon parcours, chapitre par chapitre</h2>
+                <p>Choisis un chapitre pour découvrir les étapes qui ont construit mon profil.</p>
+            </div>
+            <div class="story-progress" aria-label="Progression du parcours">
+                <span class="story-progress-fill"></span>
+            </div>
+            <div class="story-chapters" role="tablist">
+                <button class="story-chapter is-active" type="button" data-story-chapter="0" role="tab">
+                    <span>01</span><strong>Le déclic</strong><small>Curiosité & création</small>
+                </button>
+                <button class="story-chapter" type="button" data-story-chapter="1" role="tab">
+                    <span>02</span><strong>Construire</strong><small>Code & jeux vidéo</small>
+                </button>
+                <button class="story-chapter" type="button" data-story-chapter="2" role="tab">
+                    <span>03</span><strong>Explorer</strong><small>3D & immersion</small>
+                </button>
+                <button class="story-chapter" type="button" data-story-chapter="3" role="tab">
+                    <span>04</span><strong>Créer</strong><small>Audio & projets</small>
+                </button>
+            </div>
+            <article class="story-panel" aria-live="polite">
+                <span class="story-panel-number">CHAPITRE 01</span>
+                <h3 data-story-title>Le déclic</h3>
+                <p data-story-text>Tout commence par l'envie de comprendre comment les mondes numériques prennent vie, puis de les rendre réels avec mes propres outils.</p>
+                <div class="story-choice">
+                    <span data-story-prompt>Quelle piste veux-tu suivre ?</span>
+                    <button type="button" class="story-choice-button" data-story-next>Continuer <i class="bi bi-arrow-right"></i></button>
+                </div>
+            </article>
+        </div>
+    </section>
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-                <h2>About</h2>
-                <p>Hello and welcome to my portfolio. I am passionate about computer
-                    science and looking for new knowledge to develop myself as a professional in the industry.</p>
+                <h2>À propos</h2>
+                <p>Je conçois des expériences numériques à la croisée du développement, du jeu vidéo et de la 3D.</p>
             </div>
 
             <div class="row">
@@ -102,55 +154,30 @@
                     <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
                 </div>
                 <div class="col-lg-8 pt-4 pt-lg-0 content">
-                    <h3>Holder of a Bachelor's degree in Virtual Reality and Video Games from ESGI.</h3>
+                    <h3>Développeur polyvalent, spécialisé en technologies immersives et création numérique.</h3>
                     <p class="fst-italic">
-                        ESGI is a renowned IT school offering a comprehensive curriculum adapted to the needs of the
-                        market. The program combines theory and practice to train IT professionals capable of meeting
-                        the challenges of tomorrow.
+                        Diplômé d'un Bachelor Réalité Virtuelle et Jeux Vidéo à l'ESGI, je transforme des idées en
+                        prototypes fonctionnels, interfaces claires et expériences interactives.
                     </p>
                     <div class="row">
                         <div class="col-lg-6">
                             <ul>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong>
-                                    <span>26 April 2002</span></li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong>
-                                    <span>Paris, France</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Localisation:</strong>
+                                <span>Paris, France</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Formation:</strong>
+                                <span>ESGI — Réalité virtuelle & jeux vidéo</span></li>
                             </ul>
                         </div>
                         <div class="col-lg-6">
                             <ul>
-                                <script>
-                                    // Date de naissance
-                                    const birthYear = 2002;
-                                    const birthMonth = 04; // Juillet (0 = janvier, donc 7 = août)
-                                    const birthDay = 26;
-
-                                    const today = new Date();
-                                    let age = today.getFullYear() - birthYear;
-
-                                    // Si l'anniversaire n'est pas encore passé cette année, on enlève 1
-                                    const hasBirthdayPassed =
-                                        today.getMonth() > birthMonth - 1 ||
-                                        (today.getMonth() === birthMonth - 1 && today.getDate() >= birthDay);
-
-                                    if (!hasBirthdayPassed) {
-                                        age--;
-                                    }
-
-                                    // Affiche l'âge dans le span
-                                    document.getElementById("age").textContent = age;
-                                </script>
-
-                                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span id="age"></span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Domaines:</strong>
+                                    <span>Web, logiciel, jeu vidéo, 3D</span></li>
                             </ul>
                         </div>
                     </div>
                     <p>
-                        I chose this training because of the recognition of this diploma, the quality of the teaching
-                        and the perspective of continuing in a master's degree in order to specialize. The orientation
-                        in the field of computer science and its specialties are a source of motivation for my
-                        professional project. Technological evolutions and creativity are driving forces and correspond
-                        to my profile.
+                        Curieux et autonome, j'aime apprendre de nouvelles technologies et passer rapidement de
+                        l'exploration à une réalisation concrète. Retrouvez l'ensemble de mes dépôts publics ci-dessous.
                     </p>
                 </div>
             </div>
@@ -164,11 +191,102 @@
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-                <h2>Resume</h2>
+                <h2>CV</h2>
+                <p>Un aperçu de mon parcours, de mes compétences et de ma façon de travailler.</p>
             </div>
 
-            <div data-aos="fade-up" data-aos-delay="100">
-                <img src="assets/img/resume.png" class="img-fluid" alt="">
+            <div class="resume-grid resume-grid-wide" data-aos="fade-up" data-aos-delay="100">
+                <div class="resume-card">
+                    <span class="resume-label">Expériences</span>
+                    <div class="resume-entry">
+                        <h3>Ingénieur du son</h3>
+                        <p>NSX RECORDZ · 8–23 juillet 2026</p>
+                    </div>
+                    <div class="resume-entry">
+                        <h3>Support informatique</h3>
+                        <p>JobTeaser · septembre 2023–2024</p>
+                    </div>
+                    <div class="resume-entry">
+                        <h3>Assistant modélisation 3D</h3>
+                        <p>Latchi · juillet–août 2022</p>
+                    </div>
+                    <div class="resume-entry">
+                        <h3>Animateur BAFA</h3>
+                        <p>Centre de loisirs · août 2021</p>
+                    </div>
+                </div>
+                <div class="resume-card">
+                    <span class="resume-label">Formation</span>
+                    <div class="resume-entry">
+                        <h3>Bachelor (Bac+3)</h3>
+                        <p>ESGI, Paris · 2021–2024</p>
+                        <p class="resume-muted">Chef de projet logiciel et réseaux · Ingénierie réalité virtuelle & jeux vidéo.</p>
+                    </div>
+                    <div class="resume-entry">
+                        <h3>Baccalauréat général</h3>
+                        <p>Sciences de l'ingénieur · 2020</p>
+                    </div>
+                    <div class="resume-entry">
+                        <h3>Formation FL Studio</h3>
+                        <p>Formation en ligne · 2021</p>
+                    </div>
+                </div>
+                <div class="resume-card">
+                    <span class="resume-label">Compétences techniques</span>
+                    <div class="skill-tags">
+                        <span>JavaScript</span><span>HTML / CSS</span><span>PHP</span>
+                        <span>C / C#</span><span>C++</span><span>Python</span><span>Rust</span>
+                        <span>Java</span><span>Node.js</span><span>Git</span><span>Unity</span>
+                        <span>Unreal Engine</span><span>Blender</span><span>Linux</span><span>SQL</span>
+                    </div>
+                    <p class="resume-muted resume-subtitle">Méthodes</p>
+                    <div class="skill-tags">
+                        <span>Agile</span><span>Scrum</span><span>Gestion de projet</span>
+                    </div>
+                </div>
+                <div class="resume-card resume-card-wide">
+                    <span class="resume-label">Projets techniques</span>
+                    <ul class="resume-list">
+                        <li>Jeu Tetris multijoueur en C et jeu de type Worms en Python.</li>
+                        <li>Site de restaurant réalisé de A à Z en HTML, CSS et PHP.</li>
+                        <li>Jeu VR multijoueur de stratégie en temps réel avec Unity.</li>
+                        <li>Animation d'une minute créée avec Blender et modélisation 3D avec OpenGL.</li>
+                        <li>Jeux vidéo à contrôles alternatifs publiés sur itch.io.</li>
+                        <li>IA par apprentissage par renforcement avec Q-learning, récompenses et mécanismes évolutionnaires.</li>
+                    </ul>
+                </div>
+                <div class="resume-card">
+                    <span class="resume-label">Projets musicaux</span>
+                    <ul class="resume-list">
+                        <li>Composition, enregistrement, mixage et mastering de morceaux originaux publiés sur SoundCloud.</li>
+                        <li>Production autonome de beats et morceaux rap, trap et mélodiques sur FL Studio.</li>
+                        <li>Gestion complète du workflow de création musicale de A à Z.</li>
+                        <li>Développement d'un projet artistique personnel avec sorties régulières.</li>
+                    </ul>
+                    <p class="resume-subtitle"><strong>Compétences audio</strong></p>
+                    <div class="skill-tags">
+                        <span>FL Studio</span><span>Composition</span><span>Arrangement</span>
+                        <span>Enregistrement</span><span>Mixage</span><span>Routing audio</span>
+                        <span>Traitement audio</span><span>Effets</span><span>Sound design</span>
+                        <span>Mastering</span><span>Configuration matériel</span>
+                    </div>
+                </div>
+                <div class="resume-card">
+                    <span class="resume-label">Profil</span>
+                    <ul class="resume-list">
+                        <li>Travail en équipe et communication efficace.</li>
+                        <li>Résolution de problèmes techniques et recherche de solutions créatives.</li>
+                        <li>Rigueur, autonomie, gestion des priorités et respect des délais.</li>
+                        <li>Installation et configuration de matériel technique.</li>
+                        <li>Apprentissage rapide et adaptation aux nouveaux outils.</li>
+                    </ul>
+                    <p class="resume-subtitle"><strong>Langues</strong></p>
+                    <p class="resume-muted">Anglais — TOEIC · Allemand — A1</p>
+                    <p class="resume-subtitle"><strong>Centres d'intérêt</strong></p>
+                    <p class="resume-muted">Musique, surf, dessin, jeux vidéo, volleyball et basketball.</p>
+                    <a class="button button-outline" href="/assets/cv.pdf">Télécharger mon CV (PDF) <i class="bi bi-download"></i></a>
+                    <a class="button button-outline" href="mailto:joshuatangtonghi@icloud.com">Me contacter <i class="bi bi-envelope"></i></a>
+                </div>
             </div>
         </div>
     </section><!-- End Resume Section -->
@@ -178,19 +296,17 @@
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-                <h2>Portfolio</h2>
-                <p>I am passionate about web development as well as 3d, computer science and have worked on various
-                    personal projects to improve my skills and discover new technologies. Here are my projects, which
-                    represent my creativity, my rigor and my commitment to technical excellence.</p>
+                <h2>Mes projets GitHub</h2>
+                <p>Une sélection de mes dépôts publics, de mes projets d'étude à mes expérimentations techniques.</p>
             </div>
 
             <div class="row">
                 <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
                     <ul id="portfolio-flters">
-                        <li data-filter="*" class="filter-active">All</li>
-                        <li data-filter=".filter-game">Game</li>
-                        <li data-filter=".filter-3d">3d</li>
-                        <li data-filter=".filter-web">Web</li>
+                        <li data-filter="*" class="filter-active">Tous</li>
+                        <li data-filter=".filter-game">Jeu vidéo</li>
+                        <li data-filter=".filter-3d">3D</li>
+                        <li data-filter=".filter-code">Code</li>
                     </ul>
                 </div>
             </div>
@@ -201,8 +317,8 @@
                     <div class="portfolio-wrap">
                         <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
-                            <h4>Website annual project </h4>
-                            <p>Web</p>
+                            <h4>Annual project 2022</h4>
+                            <p>PHP · Web</p>
                             <div class="portfolio-links">
                                 <a href="https://github.com/Joshua-Tangtonghi/Annual-project-2022"
                                    title="Github link"><i class="bi bi-github"></i></a>
@@ -219,8 +335,8 @@
                     <div class="portfolio-wrap">
                         <img src="assets/img/portfolio/pokemon1.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
-                            <h4>Pokedex wesite</h4>
-                            <p>Web</p>
+                            <h4>Pokédex</h4>
+                            <p>PHP · Web</p>
                             <div class="portfolio-links">
                                 <a href="https://github.com/Joshua-Tangtonghi/pokedex"
                                    title="Github link"><i class="bi bi-github"></i></a>
@@ -237,8 +353,8 @@
                     <div class="portfolio-wrap">
                         <img src="assets/img/portfolio/Tetris1.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
-                            <h4>Tetris</h4>
-                            <p>Game</p>
+                            <h4>Tetris multijoueur</h4>
+                            <p>C · Jeu vidéo</p>
                             <div class="portfolio-links">
                                 <a href="https://github.com/Joshua-Tangtonghi/C-Tetris-Multiplayer"
                                    title="Github link"><i class="bi bi-github"></i></a>
@@ -255,14 +371,137 @@
                     <div class="portfolio-wrap">
                         <img src="assets/img/portfolio/Stage1.jpg" class="img-fluid" alt="">
                         <div class="portfolio-info">
-                            <h4>3D Internship 2022</h4>
-                            <p>3D</p>
+                            <h4>Stage 3D 2022</h4>
+                            <p>Blender · 3D</p>
                             <div class="portfolio-links">
                                 <a href="assets/img/portfolio/Stage1.jpg" data-gallery="portfolioGallery "
                                    class="portfolio-lightbox" title="3D"><i class="bx bx-plus"></i></a>
                                 <a href="Stage_3d.html" class="portfolio-details-lightbox"
                                    data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-code">
+                    <div class="portfolio-wrap project-placeholder">
+                        <div class="portfolio-info always-visible">
+                            <i class="bi bi-braces project-icon"></i>
+                            <h4>Blender autosave</h4>
+                            <p>Python · Outil</p>
+                            <div class="portfolio-links">
+                                <a href="https://github.com/Joshua-Tangtonghi/Blender-autosave" target="_blank" rel="noopener" title="Voir sur GitHub"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-code">
+                    <div class="portfolio-wrap project-placeholder">
+                        <div class="portfolio-info always-visible">
+                            <i class="bi bi-cpu project-icon"></i>
+                            <h4>Falcon IA</h4>
+                            <p>C# · Intelligence artificielle</p>
+                            <div class="portfolio-links"><a href="https://github.com/Joshua-Tangtonghi/falcon-ia" target="_blank" rel="noopener" title="Voir sur GitHub"><i class="bi bi-github"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-game">
+                    <div class="portfolio-wrap project-placeholder">
+                        <div class="portfolio-info always-visible">
+                            <i class="bi bi-controller project-icon"></i>
+                            <h4>GET OUT</h4>
+                            <p>Mathematica · Jeu vidéo</p>
+                            <div class="portfolio-links"><a href="https://github.com/Joshua-Tangtonghi/GET-OUT-" target="_blank" rel="noopener" title="Voir sur GitHub"><i class="bi bi-github"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-code">
+                    <div class="portfolio-wrap project-placeholder">
+                        <div class="portfolio-info always-visible">
+                            <i class="bi bi-calculator project-icon"></i>
+                            <h4>MathSoil</h4>
+                            <p>C · Projet technique</p>
+                            <div class="portfolio-links"><a href="https://github.com/Joshua-Tangtonghi/MathSoil" target="_blank" rel="noopener" title="Voir sur GitHub"><i class="bi bi-github"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-code">
+                    <div class="portfolio-wrap project-placeholder">
+                        <div class="portfolio-info always-visible">
+                            <i class="bi bi-database project-icon"></i>
+                            <h4>Save-load system</h4>
+                            <p>Programmation · Système</p>
+                            <div class="portfolio-links"><a href="https://github.com/Joshua-Tangtonghi/save-load-system" target="_blank" rel="noopener" title="Voir sur GitHub"><i class="bi bi-github"></i></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-game">
+                    <div class="portfolio-wrap project-placeholder">
+                        <div class="portfolio-info always-visible">
+                            <i class="bi bi-joystick project-icon"></i>
+                            <h4>Worms-like</h4>
+                            <p>Python · Jeu vidéo</p>
+                            <p class="project-description">Jeu de stratégie au tour par tour inspiré des jeux d'artillerie.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                    <div class="portfolio-wrap project-placeholder">
+                        <div class="portfolio-info always-visible">
+                            <i class="bi bi-shop project-icon"></i>
+                            <h4>Site de restaurant</h4>
+                            <p>HTML · CSS · PHP</p>
+                            <p class="project-description">Site réalisé de A à Z, de l'intégration à la logique serveur.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-game">
+                    <div class="portfolio-wrap project-placeholder">
+                        <div class="portfolio-info always-visible">
+                            <i class="bi bi-badge-vr project-icon"></i>
+                            <h4>Jeu VR multijoueur</h4>
+                            <p>Unity · RTS</p>
+                            <p class="project-description">Expérience de stratégie en temps réel conçue pour la réalité virtuelle.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-3d">
+                    <div class="portfolio-wrap project-placeholder">
+                        <div class="portfolio-info always-visible">
+                            <i class="bi bi-box project-icon"></i>
+                            <h4>Animation 3D</h4>
+                            <p>Blender · Modélisation</p>
+                            <p class="project-description">Animation d'une minute et travail de modélisation 3D.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-3d">
+                    <div class="portfolio-wrap project-placeholder">
+                        <div class="portfolio-info always-visible">
+                            <i class="bi bi-bezier2 project-icon"></i>
+                            <h4>Mathématiques 3D</h4>
+                            <p>OpenGL · Quaternions</p>
+                            <p class="project-description">Exploration des rotations 3D et de la modélisation avec OpenGL.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-game">
+                    <div class="portfolio-wrap project-placeholder">
+                        <div class="portfolio-info always-visible">
+                            <i class="bi bi-controller project-icon"></i>
+                            <h4>Contrôles alternatifs</h4>
+                            <p>Jeux vidéo · itch.io</p>
+                            <p class="project-description">Prototypes de jeux expérimentant de nouvelles façons de jouer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-code">
+                    <div class="portfolio-wrap project-placeholder">
+                        <div class="portfolio-info always-visible">
+                            <i class="bi bi-diagram-3 project-icon"></i>
+                            <h4>IA évolutionnaire</h4>
+                            <p>Q-learning · IA</p>
+                            <p class="project-description">Apprentissage par renforcement avec système de récompenses et mécanismes darwiniens.</p>
                         </div>
                     </div>
                 </div>
@@ -374,10 +613,11 @@
 <!-- ======= Footer ======= -->
 <footer id="footer">
     <div class="container">
-        <h3>Tang tong hi Joshua</h3>
-        <p>Link of my Linktree: <a href="https://linktr.ee/joshuatangtonghi">Linktree</a></p>
+        <h3>Joshua Tang Tong Hi</h3>
+        <p>Développeur, créateur 3D et concepteur de jeux vidéo.</p>
+        <p><a href="https://github.com/Joshua-Tangtonghi">GitHub</a> · <a href="https://linktr.ee/joshuatangtonghi">Linktree</a></p>
         <h2>Contact</h2>
-        <p>Mail: <a href="mailto:jtangtonghi@myges.fr">jtangtonghi@myges.fr</a> <br> 06 95 90 74 77</p>
+        <p><a href="mailto:joshuatangtonghi@icloud.com">joshuatangtonghi@icloud.com</a></p>
     </div>
 </footer><!-- End Footer -->
 
@@ -393,14 +633,6 @@
 <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="assets/vendor/typed.js/typed.min.js"></script>
 
-<script type="text/javascript">
-    $(document).ready(function(){
-        var allowed_brower = ['chrome', 'firefox', 'safari', 'mozilla'];
-        if (allowed_brower.indexOf($.browser.name) === -1) {
-            alert("Votre navigateur n'est pas compatible avec ce site. Veuillez installer une version récente de Google Chrome, Firefox ou Microsoft Edge pour y accéder.")
-        }
-    });
-</script>
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
 
