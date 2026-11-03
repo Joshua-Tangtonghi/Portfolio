@@ -6,8 +6,20 @@
 
   const title = caseStudy.querySelector('h1');
   const meta = caseStudy.querySelector('.case-meta');
-  const sections = [...caseStudy.querySelectorAll(':scope > section')];
   if (!title) return;
+
+  const incompleteContent = /\[À\s*(?:COMPLÉTER|CONFIRMER)\]|à\s*compléter|à\s*confirmer|url\s+à\s+compléter/i;
+  caseStudy.querySelectorAll('p, li, .video-placeholder').forEach((element) => {
+    if (incompleteContent.test(element.textContent)) element.remove();
+  });
+  caseStudy.querySelectorAll(':scope > section').forEach((section) => {
+    const hasContent = [...section.children].some((child) =>
+      child.tagName !== 'H2' && child.textContent.trim()
+    );
+    if (!hasContent) section.remove();
+  });
+
+  const sections = [...caseStudy.querySelectorAll(':scope > section')];
 
   const slugify = (value) => value
     .toLowerCase()

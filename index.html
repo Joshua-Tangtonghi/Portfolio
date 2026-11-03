@@ -95,31 +95,29 @@
             <a href="https://github.com/Joshua-Tangtonghi" aria-label="GitHub"><i class="bi bi-github"></i></a>
             <a href="https://linktr.ee/joshuatangtonghi" aria-label="Linktree"><i class="bi bi-link-45deg"></i></a>
         </div>
-        <div class="row g-3 align-items-center justify-content-center mt-3">
+        <div class="hero-actions row g-3 align-items-center justify-content-center mt-3">
             <div class="col-12 col-md-auto">
-                <button class="story-start mt-0" type="button" data-story-start>
-                    <span class="story-start-icon">▶</span> Commencer l'aventure
-                </button>
+                <a class="hero-primary-cta" href="#portfolio"><i class="bi bi-grid-3x3-gap-fill"></i> Voir mes projets</a>
             </div>
             <div class="col-12 col-md-auto">
-                <a class="story-skip m-0" href="#resume">Passer l'aventure <i class="bi bi-arrow-down"></i></a>
+                <a class="hero-secondary-cta" href="#resume"><i class="bi bi-file-earmark-text"></i> Voir mon CV</a>
             </div>
             <div class="col-12 col-md-auto">
-                <a class="btn btn-outline-warning d-inline-flex align-items-center gap-2" href="mailto:joshuatangtonghi@icloud.com">
+                <a class="hero-secondary-cta" href="mailto:joshuatangtonghi@icloud.com">
                     <i class="bi bi-envelope"></i> Me contacter
                 </a>
             </div>
             <div class="col-12 col-md-auto">
-                <button class="btn btn-outline-light d-inline-flex align-items-center gap-2" type="button" data-scene-explore aria-pressed="false">
+                <button class="hero-secondary-cta" type="button" data-scene-explore aria-pressed="false">
                     <i class="bi bi-boxes"></i> Explorer la scène 3D
                 </button>
             </div>
-            <div class="col-12 col-md-auto">
-                <a class="d-inline-flex align-items-center gap-2 p-2 rounded-3 border border-warning text-light text-decoration-none" href="https://linktr.ee/joshuatangtonghi" target="_blank" rel="noopener">
-                    <img src="assets/img/linktree.png" width="58" height="58" loading="lazy" alt="QR code vers le Linktree de Joshua Tang Tong Hi">
-                    <span>Scanner pour découvrir mes liens</span>
-                </a>
-            </div>
+        </div>
+        <div class="hero-story-entry">
+            <button class="story-start" type="button" data-story-start>
+                <span class="story-start-icon">▶</span> Explorer mon parcours
+            </button>
+            <a class="hero-linktree-link" href="https://linktr.ee/joshuatangtonghi" target="_blank" rel="noopener">Autres liens <i class="bi bi-box-arrow-up-right"></i></a>
         </div>
     </div>
 </section><!-- End Hero -->
@@ -194,8 +192,8 @@
                     <p>Ce qui me motive, c'est comprendre comment une interaction fonctionne, puis la rendre agréable à utiliser et cohérente dans une expérience complète.</p>
                     <div class="job-targets">
                         <h4>Types de postes recherchés</h4>
-                        <div class="job-target-group">
-                            <h5>Support informatique</h5>
+                        <details class="job-target-group">
+                            <summary><span class="job-target-title">Support informatique</span><span>11 intitulés</span></summary>
                             <ul>
                                 <li>Technicien support informatique N1</li>
                                 <li>Technicien support informatique N2 junior</li>
@@ -209,9 +207,9 @@
                                 <li>Technicien systèmes et réseaux junior</li>
                                 <li>Administrateur systèmes junior</li>
                             </ul>
-                        </div>
-                        <div class="job-target-group">
-                            <h5>Développement, jeu vidéo et réalité virtuelle</h5>
+                        </details>
+                        <details class="job-target-group">
+                            <summary><span class="job-target-title">Développement, jeu vidéo et réalité virtuelle</span><span>10 intitulés</span></summary>
                             <ul>
                                 <li>Développeur Unity junior</li>
                                 <li>Développeur C# junior</li>
@@ -224,9 +222,9 @@
                                 <li>Technical Artist junior</li>
                                 <li>Intégrateur Unity junior</li>
                             </ul>
-                        </div>
-                        <div class="job-target-group">
-                            <h5>Audio et audiovisuel</h5>
+                        </details>
+                        <details class="job-target-group">
+                            <summary><span class="job-target-title">Audio et audiovisuel</span><span>8 intitulés</span></summary>
                             <ul>
                                 <li>Ingénieur du son junior</li>
                                 <li>Technicien son</li>
@@ -237,9 +235,9 @@
                                 <li>Technicien studio</li>
                                 <li>Assistant sound designer</li>
                             </ul>
-                        </div>
-                        <div class="job-target-group">
-                            <h5>3D et création numérique</h5>
+                        </details>
+                        <details class="job-target-group">
+                            <summary><span class="job-target-title">3D et création numérique</span><span>6 intitulés</span></summary>
                             <ul>
                                 <li>Assistant 3D</li>
                                 <li>Modeleur 3D junior</li>
@@ -248,7 +246,7 @@
                                 <li>Intégrateur multimédia</li>
                                 <li>Assistant production numérique</li>
                             </ul>
-                        </div>
+                        </details>
                     </div>
                     <div class="row">
                         <div class="col-lg-6">
@@ -272,6 +270,37 @@
         </div>
     </section><!-- End About Section -->
 
+
+    <section id="skills-summary" class="skills-summary">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Compétences clés</h2>
+                <p>Les outils et domaines que je mobilise dans mes projets, selon mon expérience réelle.</p>
+            </div>
+            <div class="skills-summary-grid">
+                <article class="skills-summary-card">
+                    <i class="bi bi-controller"></i>
+                    <h3>Jeu vidéo &amp; VR</h3>
+                    <p>Unity, C#, gameplay, ECS et Burst Compiler sur des projets de jeu et de réalité virtuelle.</p>
+                </article>
+                <article class="skills-summary-card">
+                    <i class="bi bi-code-slash"></i>
+                    <h3>Programmation</h3>
+                    <p>C, C++, PHP, JavaScript, HTML et CSS, avec Git et des architectures client-serveur.</p>
+                </article>
+                <article class="skills-summary-card">
+                    <i class="bi bi-cpu"></i>
+                    <h3>IA &amp; 3D</h3>
+                    <p>Q-learning, apprentissage par renforcement, algorithmes évolutionnaires, Blender et OpenGL.</p>
+                </article>
+                <article class="skills-summary-card">
+                    <i class="bi bi-music-note-beamed"></i>
+                    <h3>Audio</h3>
+                    <p>FL Studio, composition, enregistrement, arrangement, mixage et bases du mastering.</p>
+                </article>
+            </div>
+        </div>
+    </section>
 
     <!-- ======= Resume Section ======= -->
     <section id="resume" class="resume">
@@ -406,8 +435,9 @@
             <h3 class="portfolio-group-title">Projets principaux</h3>
             <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
                 <div class="col-lg-6 portfolio-item filter-vr featured-project">
-                    <div class="portfolio-wrap project-placeholder case-card">
+                    <div class="portfolio-wrap featured-visual project-visual-rts case-card">
                         <div class="portfolio-info always-visible">
+                            <span class="visual-label"><i class="bi bi-boxes"></i> Présentation technique</span>
                             <span class="project-category">VR · Projet principal</span><h4>Jeu VR RTS multijoueur</h4>
                             <p>Projet de groupe inspiré de Clash Royale, avec architecture ECS et cartes dynamiques.</p>
                             <ul class="project-tech"><li>Unity</li><li>C#</li><li>ECS</li><li>Burst Compiler</li></ul>
@@ -416,7 +446,10 @@
                     </div>
                 </div>
                 <div class="col-lg-6 portfolio-item filter-ai featured-project">
-                    <div class="portfolio-wrap project-placeholder case-card">
+                    <div class="portfolio-wrap featured-visual">
+                        <video class="project-media" muted autoplay loop playsinline preload="metadata" aria-label="Aperçu vidéo de Falcon IA">
+                            <source src="assets/img/falcon-ia.mp4" type="video/mp4">
+                        </video>
                         <div class="portfolio-info always-visible">
                             <span class="project-category">IA · Projet principal</span><h4>Falcon IA</h4>
                             <p>Agent autonome combinant Q-learning et algorithmes évolutionnaires, classé quatrième en tournoi.</p>
@@ -426,13 +459,18 @@
                     </div>
                 </div>
                 <div class="col-lg-6 portfolio-item filter-game featured-project">
-                    <div class="portfolio-wrap">
-                        <img src="assets/img/portfolio/Tetris1.jpg" class="img-fluid" width="640" height="480" loading="lazy" alt="Aperçu du Tetris multijoueur">
+                    <div class="portfolio-wrap featured-visual">
+                        <a class="portfolio-media-link portfolio-lightbox" href="assets/img/portfolio/Tetris1.jpg" data-gallery="portfolioGallery" title="Tetris multijoueur — aperçu">
+                            <img src="assets/img/portfolio/Tetris1.jpg" class="img-fluid" width="640" height="480" loading="lazy" alt="Aperçu du Tetris multijoueur">
+                        </a>
                         <div class="portfolio-info"><span class="project-category">Game · Projet principal</span><h4>Tetris multijoueur</h4><p>Jeu en C avec interface SDL2 et architecture client-serveur.</p><ul class="project-tech"><li>C</li><li>SDL2</li><li>Winsock2</li></ul><div class="portfolio-links"><a href="https://github.com/Joshua-Tangtonghi/C-Tetris-Multiplayer" title="GitHub"><i class="bi bi-github"></i></a><a href="Tetris.html" title="Étude de cas"><i class="bx bx-link"></i></a></div></div>
                     </div>
                 </div>
                 <div class="col-lg-6 portfolio-item filter-game featured-project">
-                    <div class="portfolio-wrap project-placeholder case-card">
+                    <div class="portfolio-wrap featured-visual">
+                        <video class="project-media project-media-portrait" muted autoplay loop playsinline preload="metadata" aria-label="Aperçu vidéo de H2Oasis">
+                            <source src="assets/img/h2oasis.mp4" type="video/mp4">
+                        </video>
                         <div class="portfolio-info always-visible">
                             <span class="project-category">Game · Projet principal</span><h4>H2Oasis</h4>
                             <p>Jeu de Game Jam où un barman purifie des verres avec un contrôleur alternatif.</p>
@@ -447,19 +485,25 @@
             <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="250">
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                     <div class="portfolio-wrap">
-                        <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" width="640" height="480" loading="lazy" alt="Aperçu du projet annuel 2022">
+                        <a class="portfolio-media-link portfolio-lightbox" href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" title="Annual project 2022 — aperçu">
+                            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" width="640" height="480" loading="lazy" alt="Aperçu du projet annuel 2022">
+                        </a>
                         <div class="portfolio-info"><span class="project-category">Web</span><h4>Annual project 2022</h4><p>Plateforme full-stack de gestion des associations étudiantes.</p><ul class="project-tech"><li>PHP</li><li>JavaScript</li><li>CSS</li></ul><div class="portfolio-links"><a href="https://github.com/Joshua-Tangtonghi/Annual-project-2022" title="GitHub"><i class="bi bi-github"></i></a><a href="annual_projetc_2022.html" title="Étude de cas"><i class="bx bx-link"></i></a></div></div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                     <div class="portfolio-wrap">
-                        <img src="assets/img/portfolio/pokemon1.jpg" class="img-fluid" width="640" height="480" loading="lazy" alt="Aperçu du projet Pokédex">
+                        <a class="portfolio-media-link portfolio-lightbox" href="assets/img/portfolio/pokemon1.jpg" data-gallery="portfolioGallery" title="Pokédex — aperçu">
+                            <img src="assets/img/portfolio/pokemon1.jpg" class="img-fluid" width="640" height="480" loading="lazy" alt="Aperçu du projet Pokédex">
+                        </a>
                         <div class="portfolio-info"><span class="project-category">Web</span><h4>Pokédex</h4><p>Application web collaborative avec profils et collections personnelles.</p><ul class="project-tech"><li>PHP</li><li>HTML</li><li>CSS</li></ul><div class="portfolio-links"><a href="https://github.com/Joshua-Tangtonghi/pokedex" title="GitHub"><i class="bi bi-github"></i></a><a href="pokemon.html" title="Étude de cas"><i class="bx bx-link"></i></a></div></div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item filter-3d">
                     <div class="portfolio-wrap">
-                        <img src="assets/img/portfolio/Stage1.jpg" class="img-fluid" width="640" height="480" loading="lazy" alt="Aperçu du projet de modélisation 3D">
+                        <a class="portfolio-media-link portfolio-lightbox" href="assets/img/portfolio/Stage1.jpg" data-gallery="portfolioGallery" title="Stage 3D — aperçu">
+                            <img src="assets/img/portfolio/Stage1.jpg" class="img-fluid" width="640" height="480" loading="lazy" alt="Aperçu du projet de modélisation 3D">
+                        </a>
                         <div class="portfolio-info"><span class="project-category">3D</span><h4>Stage 3D</h4><p>Retranscription d'un personnage 2D en modèle 3D avec Blender.</p><ul class="project-tech"><li>Blender</li><li>Texturing</li></ul><div class="portfolio-links"><a href="Stage_3d.html" title="Étude de cas"><i class="bx bx-link"></i></a></div></div>
                     </div>
                 </div>
@@ -590,7 +634,6 @@
         <p><a href="https://github.com/Joshua-Tangtonghi">GitHub</a> · <a href="https://linktr.ee/joshuatangtonghi">Linktree</a></p>
         <h2>Contact</h2>
         <p><a href="mailto:joshuatangtonghi@icloud.com">joshuatangtonghi@icloud.com</a></p>
-        <p class="direct-link-placeholder">LinkedIn : URL à compléter</p>
     </div>
 </footer><!-- End Footer -->
 
