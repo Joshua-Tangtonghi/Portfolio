@@ -287,6 +287,16 @@
   let sceneExploring = false
   let sceneFrameTimeout = 0
 
+  const preventPageScroll = (event) => {
+    if (sceneExploring) event.preventDefault()
+  }
+
+  const preventPageScrollKeys = (event) => {
+    if (!sceneExploring) return
+    const scrollKeys = [' ', 'PageUp', 'PageDown', 'Home', 'End', 'ArrowUp', 'ArrowDown']
+    if (scrollKeys.includes(event.key)) event.preventDefault()
+  }
+
   const setSceneStatus = (message) => {
     if (sceneStatus) sceneStatus.textContent = message
   }
@@ -294,7 +304,17 @@
   const setSceneMode = (enabled) => {
     sceneExploring = enabled
     hero?.classList.toggle('scene-exploring', enabled)
+    document.body.classList.toggle('scene-exploring', enabled)
     sceneExploration?.setAttribute('aria-hidden', String(!enabled))
+    if (enabled) {
+      document.addEventListener('wheel', preventPageScroll, { passive: false })
+      document.addEventListener('touchmove', preventPageScroll, { passive: false })
+      document.addEventListener('keydown', preventPageScrollKeys)
+    } else {
+      document.removeEventListener('wheel', preventPageScroll)
+      document.removeEventListener('touchmove', preventPageScroll)
+      document.removeEventListener('keydown', preventPageScrollKeys)
+    }
     exploreButtons.forEach((button) => {
       button.setAttribute('aria-pressed', String(enabled))
     })

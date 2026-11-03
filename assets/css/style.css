@@ -2101,6 +2101,10 @@ button:focus-visible,
   cursor: grab;
 }
 
+body.scene-exploring {
+  overflow: hidden;
+}
+
 #hero.scene-exploring #canvas3d:active {
   cursor: grabbing;
 }
@@ -2198,11 +2202,6 @@ button:focus-visible,
 .scene-exploration-status {
   color: var(--portfolio-gold);
   font-size: 13px;
-}
-
-.scene-exploration-hint {
-  color: var(--portfolio-muted);
-  font-size: 12px;
 }
 
 .scene-exit {
