@@ -2,6 +2,9 @@
 (function() {
   "use strict";
 
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const scrollBehavior = prefersReducedMotion ? 'auto' : 'smooth'
+
   /**
    * Easy selector helper function
    */
@@ -62,7 +65,7 @@
     let elementPos = select(el).offsetTop
     window.scrollTo({
       top: elementPos,
-      behavior: 'smooth'
+      behavior: scrollBehavior
     })
   }
 
@@ -137,13 +140,17 @@
   if (typed) {
     let typed_strings = typed.getAttribute('data-typed-items')
     typed_strings = typed_strings.split(',')
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
-    });
+    if (prefersReducedMotion) {
+      typed.textContent = typed_strings[0]
+    } else {
+      new Typed('.typed', {
+        strings: typed_strings,
+        loop: true,
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 2000
+      });
+    }
   }
 
   /**
@@ -151,9 +158,30 @@
    */
   const loadingScreen = select('#loading-screen')
   if (loadingScreen) {
-    window.addEventListener('load', () => {
-      window.setTimeout(() => loadingScreen.classList.add('is-loaded'), 1400)
-    })
+    const loadingSkip = select('[data-loading-skip]')
+    let hasVisited = false
+    try {
+      hasVisited = window.sessionStorage.getItem('portfolio-loading-seen') === 'true'
+    } catch (error) {
+      hasVisited = false
+    }
+
+    const dismissLoading = () => {
+      loadingScreen.classList.add('is-loaded')
+      try {
+        window.sessionStorage.setItem('portfolio-loading-seen', 'true')
+      } catch (error) {
+        // Storage can be unavailable in private browsing; the loader still dismisses.
+      }
+    }
+
+    if (hasVisited || prefersReducedMotion) {
+      dismissLoading()
+    } else {
+      if (loadingSkip) loadingSkip.addEventListener('click', dismissLoading)
+      window.addEventListener('load', () => window.setTimeout(dismissLoading, 1500), { once: true })
+      window.setTimeout(dismissLoading, 1500)
+    }
   }
 
   /**
@@ -167,6 +195,7 @@
   const storyProgress = select('.story-progress-fill')
   const storyNext = select('[data-story-next]')
   const storyStart = select('[data-story-start]')
+  const storyPanel = select('#story-panel')
 
   const storyData = [
     {
@@ -197,12 +226,16 @@
 
     storyChapters.forEach((chapter, chapterIndex) => {
       chapter.classList.toggle('is-active', chapterIndex === index)
+      chapter.setAttribute('aria-selected', String(chapterIndex === index))
+      chapter.setAttribute('aria-current', chapterIndex === index ? 'step' : 'false')
+      chapter.setAttribute('tabindex', chapterIndex === index ? '0' : '-1')
     })
     storyNumber.textContent = `CHAPITRE ${String(index + 1).padStart(2, '0')}`
     storyTitle.textContent = data.title
     storyText.textContent = data.text
     storyPrompt.textContent = data.prompt
     storyProgress.style.width = `${((index + 1) / storyData.length) * 100}%`
+    storyPanel.setAttribute('aria-labelledby', `story-tab-${index}`)
     storyNext.innerHTML = index === storyData.length - 1
       ? 'Rejouer <i class="bi bi-arrow-repeat"></i>'
       : 'Continuer <i class="bi bi-arrow-right"></i>'
@@ -211,6 +244,19 @@
   if (storyChapters.length) {
     storyChapters.forEach((chapter, index) => {
       chapter.addEventListener('click', () => selectStoryChapter(index))
+      chapter.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault()
+          selectStoryChapter(index)
+          return
+        }
+        if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return
+        event.preventDefault()
+        const direction = event.key === 'ArrowRight' ? 1 : -1
+        const nextIndex = (index + direction + storyChapters.length) % storyChapters.length
+        storyChapters[nextIndex].focus()
+        selectStoryChapter(nextIndex)
+      })
     })
   }
 
@@ -224,7 +270,7 @@
   if (storyStart) {
     storyStart.addEventListener('click', () => {
       const story = select('#story')
-      if (story) story.scrollIntoView({ behavior: 'smooth' })
+      if (story) story.scrollIntoView({ behavior: scrollBehavior })
     })
   }
 
