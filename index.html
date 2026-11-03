@@ -44,11 +44,12 @@
 
 <body>
 
-<div id="loading-screen" aria-label="Chargement du portfolio">
+<div id="loading-screen" aria-label="Chargement du portfolio" aria-live="polite">
     <div class="loading-mark">JT</div>
     <p>Initialisation de l'expérience</p>
     <div class="loading-track"><span></span></div>
     <small>Chargement des chapitres<span class="loading-dots">...</span></small>
+    <button class="loading-skip" type="button" data-loading-skip>Passer</button>
 </div>
 
 <!-- ======= Mobile nav toggle button ======= -->
@@ -82,7 +83,7 @@
            }
 
     </script>
-    <script type="module" src="assets/js/spline.js"></script>
+    <script type="module" src="assets/js/spline.js" defer></script>
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
         <p class="eyebrow">PORTFOLIO PERSONNEL</p>
         <h1>Joshua Tang Tong Hi</h1>
@@ -94,9 +95,10 @@
         <button class="story-start" type="button" data-story-start>
             <span class="story-start-icon">▶</span> Commencer l'aventure
         </button>
+        <a class="story-skip" href="#resume">Passer l'aventure <i class="bi bi-arrow-down"></i></a>
         <a class="hero-contact" href="mailto:joshuatangtonghi@icloud.com"><i class="bi bi-envelope"></i> Me contacter</a>
         <a class="linktree-qr" href="https://linktr.ee/joshuatangtonghi" target="_blank" rel="noopener">
-            <img src="assets/img/linktree.png" alt="QR code vers le Linktree de Joshua Tang Tong Hi">
+            <img src="assets/img/linktree.png" width="300" height="300" loading="lazy" alt="QR code vers le Linktree de Joshua Tang Tong Hi">
             <span>Scanner pour découvrir mes liens</span>
         </a>
     </div>
@@ -114,21 +116,22 @@
             <div class="story-progress" aria-label="Progression du parcours">
                 <span class="story-progress-fill"></span>
             </div>
-            <div class="story-chapters" role="tablist">
-                <button class="story-chapter is-active" type="button" data-story-chapter="0" role="tab">
+            <a class="story-skip story-skip-inline" href="#resume">Passer l'aventure et voir le CV <i class="bi bi-arrow-down"></i></a>
+            <div class="story-chapters" role="tablist" aria-label="Chapitres du parcours">
+                <button id="story-tab-0" class="story-chapter is-active" type="button" data-story-chapter="0" role="tab" aria-selected="true" aria-controls="story-panel" aria-current="step" tabindex="0">
                     <span>01</span><strong>Le déclic</strong><small>Curiosité & création</small>
                 </button>
-                <button class="story-chapter" type="button" data-story-chapter="1" role="tab">
+                <button id="story-tab-1" class="story-chapter" type="button" data-story-chapter="1" role="tab" aria-selected="false" aria-controls="story-panel" tabindex="-1">
                     <span>02</span><strong>Construire</strong><small>Code & jeux vidéo</small>
                 </button>
-                <button class="story-chapter" type="button" data-story-chapter="2" role="tab">
+                <button id="story-tab-2" class="story-chapter" type="button" data-story-chapter="2" role="tab" aria-selected="false" aria-controls="story-panel" tabindex="-1">
                     <span>03</span><strong>Explorer</strong><small>3D & immersion</small>
                 </button>
-                <button class="story-chapter" type="button" data-story-chapter="3" role="tab">
+                <button id="story-tab-3" class="story-chapter" type="button" data-story-chapter="3" role="tab" aria-selected="false" aria-controls="story-panel" tabindex="-1">
                     <span>04</span><strong>Créer</strong><small>Audio & projets</small>
                 </button>
             </div>
-            <article class="story-panel" aria-live="polite">
+            <article id="story-panel" class="story-panel" role="tabpanel" aria-live="polite" aria-labelledby="story-tab-0" tabindex="0">
                 <span class="story-panel-number">CHAPITRE 01</span>
                 <h3 data-story-title>Le déclic</h3>
                 <p data-story-text>Tout commence par l'envie de comprendre comment les mondes numériques prennent vie, puis de les rendre réels avec mes propres outils.</p>
@@ -151,7 +154,7 @@
 
             <div class="row">
                 <div class="col-lg-4">
-                    <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+                    <img src="assets/img/profile-img.jpg" class="img-fluid" width="500" height="500" loading="lazy" alt="Portrait de Joshua Tang Tong Hi">
                 </div>
                 <div class="col-lg-8 pt-4 pt-lg-0 content">
                     <h3>Développeur polyvalent, spécialisé en technologies immersives et création numérique.</h3>
@@ -316,7 +319,7 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                     <div class="portfolio-wrap">
-                        <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" width="640" height="480" loading="lazy" alt="Aperçu du site du projet annuel 2022">
                         <div class="portfolio-info">
                             <h4>Annual project 2022</h4>
                             <p>PHP · Web</p>
@@ -334,7 +337,7 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web">
                     <div class="portfolio-wrap">
-                        <img src="assets/img/portfolio/pokemon1.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/portfolio/pokemon1.jpg" class="img-fluid" width="640" height="480" loading="lazy" alt="Aperçu du projet Pokédex">
                         <div class="portfolio-info">
                             <h4>Pokédex</h4>
                             <p>PHP · Web</p>
@@ -352,7 +355,7 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-game">
                     <div class="portfolio-wrap">
-                        <img src="assets/img/portfolio/Tetris1.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/portfolio/Tetris1.jpg" class="img-fluid" width="640" height="480" loading="lazy" alt="Aperçu du Tetris multijoueur">
                         <div class="portfolio-info">
                             <h4>Tetris multijoueur</h4>
                             <p>C · Jeu vidéo</p>
@@ -370,7 +373,7 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-3d">
                     <div class="portfolio-wrap">
-                        <img src="assets/img/portfolio/Stage1.jpg" class="img-fluid" alt="">
+                        <img src="assets/img/portfolio/Stage1.jpg" class="img-fluid" width="640" height="480" loading="lazy" alt="Aperçu du projet de modélisation 3D">
                         <div class="portfolio-info">
                             <h4>Stage 3D 2022</h4>
                             <p>Blender · 3D</p>
@@ -627,15 +630,15 @@
         class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/typed.js/typed.min.js"></script>
+<script src="assets/vendor/aos/aos.js" defer></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+<script src="assets/vendor/typed.js/typed.min.js" defer></script>
 
 <!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.js?v=20261103" defer></script>
 
 </body>
 
