@@ -848,6 +848,49 @@ section {
   text-align: center;
 }
 
+.job-targets {
+  margin-top: 24px;
+}
+
+.job-targets h4,
+.job-targets h5 {
+  color: #f6c978;
+}
+
+.job-targets h4 {
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.job-target-group {
+  margin-bottom: 18px;
+}
+
+.job-target-group h5 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.job-target-group ul {
+  columns: 2;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.job-target-group li {
+  color: #d7d0c4;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 767px) {
+  .job-target-group ul {
+    columns: 1;
+  }
+}
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
